@@ -18,6 +18,27 @@
         android:layout_alignParentTop="true"
         android:padding="16dp"
         />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="hello"
+        android:textColor="@color/teal_200"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/test"
+        android:contentDescription="Sample Image"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"/>
+
     <TextView
         android:layout_below="@+id/backArrow"
         android:layout_width="wrap_content"
@@ -81,17 +102,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="I'm a subhead"
                 android:paddingLeft="20dp"
+                android:text="I'm a subhead"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/title" />
 
             <TextView
                 android:id="@+id/body"
                 style="@style/TextAppearance.MaterialComponents.Body1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="343dp"
+                android:layout_height="12dp"
                 android:layout_marginTop="4dp"
                 android:paddingLeft="20dp"
                 android:paddingBottom="30dp"
@@ -101,6 +123,46 @@
                 app:layout_constraintTop_toBottomOf="@id/subhead" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Bottom layer view -->
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bottom Layer"
+            android:layout_gravity="center"/>
+
+        <!-- Top layer view -->
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Top Layer"
+            android:layout_gravity="center"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:divider="@android:color/transparent" />
+
     <androidx.cardview.widget.CardView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -152,13 +214,6 @@
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-    <ListView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:divider="@android:color/transparent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        />
+
     />
 </LinearLayout>
